@@ -22,6 +22,8 @@ namespace slnverchecker
     /// </summary>
     public partial class MainWindow : Window
     {
+        string input_ = @"C:\Cygwin\home\jizFewk\gitdev\vssln\Console-2017\Console-2017.sln";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,10 +37,17 @@ namespace slnverchecker
                 .FirstOrDefault().Product;
 
             this.Title = productName;
+
+            if (!string.IsNullOrEmpty(input_))
+            {
+                txtSolutionPath.Text = input_;
+                parseSln();
+            }
         }
 
         SolutionVersionInfo svi_;
 
+        
         private void btnBrowseSolution_Click(object sender, RoutedEventArgs e)
         {
             var ofd = new Microsoft.Win32.OpenFileDialog() {
@@ -47,8 +56,12 @@ namespace slnverchecker
             var result = ofd.ShowDialog();
             if (result == false)
                 return;
-            txtSolutionPath.Text = ofd.FileName;
 
+            txtSolutionPath.Text = ofd.FileName;
+            parseSln();
+        }
+        void parseSln()
+        {
             List<string> lines = new List<string>();
             try
             {
@@ -69,6 +82,11 @@ namespace slnverchecker
                 tbSolutionVersion.Text = ex.Message;
                 return;
             }
+
+            txtFormatMajor.Text = svi_.FormatMajor.ToString();
+            txtComment.Text = svi_.Comment.ToString();
+            txtVsVersion.Text = svi_.VsVersion;
+            txtMinVsVersion.Text = svi_.MinVsVersion;
         }
     }
 }

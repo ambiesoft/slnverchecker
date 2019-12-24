@@ -1,13 +1,21 @@
 ﻿<Window x:Class="slnverchecker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="636" Loaded="Window_Loaded">
+        Title="MainWindow" Height="354.307" Width="636" Loaded="Window_Loaded">
     <Grid>
 
-        <TextBox x:Name="txtSolutionPath" Height="23" Margin="76,0,10,283" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
-        <Label Content="sln:" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="1.526,0.654" Margin="0,0,591,283" Height="26" Width="27"/>
-        <Button x:Name="btnBrowseSolution" Content="..." VerticalAlignment="Bottom" Margin="0,0,10,258" Click="btnBrowseSolution_Click" HorizontalAlignment="Right" Width="47"/>
-        <TextBlock x:Name="tbSolutionVersion" TextWrapping="Wrap" VerticalAlignment="Bottom" Margin="76,0,10,101" Height="152"/>
+        <TextBox x:Name="txtSolutionPath" Margin="76,13,10,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top"/>
+        <Label Content="sln:" HorizontalAlignment="Right" RenderTransformOrigin="1.526,0.654" Margin="0,10,591,0" Width="27" Height="26" VerticalAlignment="Top"/>
+        <Button x:Name="btnBrowseSolution" Content="..." Margin="0,41,10,0" Click="btnBrowseSolution_Click" HorizontalAlignment="Right" Width="47" Height="20" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbSolutionVersion" TextWrapping="Wrap" Margin="76,66,10,0" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" Height="114" VerticalAlignment="Top"/>
+        <Label Content="FormatMajor:" HorizontalAlignment="Right" RenderTransformOrigin="1.526,0.654" Margin="0,191,526,0" Width="92" Height="26" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtFormatMajor" Margin="102,196,427,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Label Content="Comment:" HorizontalAlignment="Right" RenderTransformOrigin="1.526,0.654" Margin="0,217,526,0" Width="92" Height="26" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtComment" Margin="102,222,427,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Label Content="vsversion:" HorizontalAlignment="Right" RenderTransformOrigin="1.526,0.654" Margin="0,243,526,0" Width="92" Height="26" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtVsVersion" Margin="102,248,427,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Label Content="minvsversion:" HorizontalAlignment="Right" RenderTransformOrigin="1.526,0.654" Margin="0,269,526,0" Width="92" Height="26" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtMinVsVersion" Margin="102,274,427,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
