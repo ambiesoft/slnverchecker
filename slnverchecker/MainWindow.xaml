@@ -1,0 +1,13 @@
+﻿<Window x:Class="slnverchecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="636" Loaded="Window_Loaded">
+    <Grid>
+
+        <TextBox x:Name="txtSolutionPath" Height="23" Margin="76,0,10,283" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+        <Label Content="sln:" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="1.526,0.654" Margin="0,0,591,283" Height="26" Width="27"/>
+        <Button x:Name="btnBrowseSolution" Content="..." VerticalAlignment="Bottom" Margin="0,0,10,258" Click="btnBrowseSolution_Click" HorizontalAlignment="Right" Width="47"/>
+        <TextBlock x:Name="tbSolutionVersion" TextWrapping="Wrap" VerticalAlignment="Bottom" Margin="76,0,10,101" Height="152"/>
+
+    </Grid>
+</Window>
